@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>reCAPTCHA</title>
+    <script src="https://www.google.com/recaptcha/api.js?render=6Ld1so0rAAAAAKZPcSUrbGy2O4tPSQO5WyltgicM"></script>
+    <script>
+      function runCaptcha() {
+        grecaptcha.ready(function () {
+          grecaptcha.execute('YOUR_SITE_KEY', { action: 'submit' }).then(function (token) {
+            window.ReactNativeWebView.postMessage(token);
+          });
+        });
+      }
+      window.onload = runCaptcha;
+    </script>
+  </head>
+  <body>
+    <p>Loading reCAPTCHA...</p>
+  </body>
+</html>
