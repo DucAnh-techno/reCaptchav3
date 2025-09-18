@@ -13,7 +13,7 @@
         return;
       }
       grecaptcha.ready(function() {
-        grecaptcha.execute('6Lc0tp8rAAAAADg9bMUQp88uC8bkUoobGonmAraZ', { action: 'login' }).then(function(token) {
+        grecaptcha.execute('6Ld1so0rAAAAAKZPcSUrbGy2O4tPSQO5WyltgicM', { action: 'login' }).then(function(token) {
           // gửi token về native app
           window.ReactNativeWebView.postMessage(JSON.stringify({ token, action: 'login' }));
         });
