@@ -3,7 +3,7 @@
 <head>
   <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width,initial-scale=1" />
-  <script src="https://www.google.com/recaptcha/api.js?render=6Ld1so0rAAAAAKZPcSUrbGy2O4tPSQO5WyltgicM"></script>
+  <script src="https://www.google.com/recaptcha/api.js?render=6Lc0tp8rAAAAADg9bMUQp88uC8bkUoobGonmAraZ"></script>
 </head>
 <body>
   <script>
@@ -13,7 +13,7 @@
         return;
       }
       grecaptcha.ready(function() {
-        grecaptcha.execute('6Ld1so0rAAAAAKZPcSUrbGy2O4tPSQO5WyltgicM', { action: 'login' }).then(function(token) {
+        grecaptcha.execute('6Lc0tp8rAAAAADg9bMUQp88uC8bkUoobGonmAraZ', { action: 'login' }).then(function(token) {
           // gửi token về native app
           window.ReactNativeWebView.postMessage(JSON.stringify({ token, action: 'login' }));
         });
